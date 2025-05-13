@@ -46,6 +46,7 @@ import com.google.maps.android.compose.widgets.ScaleBar
 import com.google.net.cronet.okhttptransport.CronetInterceptor
 import okhttp3.Call
 import okhttp3.OkHttpClient
+import okhttp3.Protocol
 import org.chromium.net.CronetEngine
 
 
@@ -56,6 +57,7 @@ class MainActivity : ComponentActivity() {
     private val viewModel: ParkingViewModel by lazy {
         val engine: CronetEngine = CronetEngine.Builder(this).build()
         val callFactory: Call.Factory = OkHttpClient.Builder()
+            .protocols(listOf(Protocol.QUIC, Protocol.HTTP_2, Protocol.HTTP_1_1))
             .addInterceptor(CronetInterceptor.newBuilder(engine).build())
             .build()
 
