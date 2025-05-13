@@ -1,0 +1,49 @@
+[versions]
+agp = "8.8.0-alpha02"
+kotlin = "2.1.20"
+coreKtx = "1.16.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.9.0"
+activityCompose = "1.10.1"
+composeBom = "2025.05.00"
+mapsVersion = "6.6.0"
+playVersion = "21.3.0"
+permissionVersion = "0.35.0-alpha"
+okhttpVersion = "4.12.0"
+cronetVersion = "18.1.0"
+jsonVersion = "1.8.0"
+cronetOkhttp = "0.1.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-maps-compose = { group="com.google.maps.android", name = "maps-compose", version.ref = "mapsVersion" }
+androidx-maps-compose-utils = { group="com.google.maps.android", name ="maps-compose-utils", version.ref = "mapsVersion" }
+androidx-maps-compose-widgets = { group="com.google.maps.android", name="maps-compose-widgets", version.ref = "mapsVersion"}
+playServicesLocation = { group="com.google.android.gms", name="play-services-location", version.ref = "playVersion"}
+accompanistPermissions = { group="com.google.accompanist", name="accompanist-permissions", version.ref="permissionVersion"}
+okhttpBom = { group="com.squareup.okhttp3", name="okhttp-bom", version.ref="okhttpVersion"}
+cronet = { group="com.google.android.gms", name="play-services-cronet", version.ref="cronetVersion"}
+json = { group="org.jetbrains.kotlinx", name="kotlinx-serialization-json", version.ref="jsonVersion"}
+cronet-okhttp = { group = "com.google.net.cronet", name = "cronet-okhttp", version.ref = "cronetOkhttp" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+
